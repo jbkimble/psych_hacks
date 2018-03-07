@@ -12,7 +12,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 
-	http.HandleFunc("/", handler).Methods("GET")
+	r.HandleFunc("/", handler).Methods("GET")
 
 	http.ListenAndServe(":8080", r)
 }
